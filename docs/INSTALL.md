@@ -57,6 +57,12 @@ Guardar dependencias:
 ```bash
 pip freeze > requirements.txt
 ```
+Instalar requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
+
 ---
 ## 5. Crear el proyecto Django
 
@@ -65,7 +71,9 @@ crea la estructura base del proyecto Django dentro del repositorio
 ```bash
 django-admin startproject config .
 ```
+
 ---
+
 ## 6. Configuración de variables de entorno
 
 Generar una clave secreta del proyecto:
@@ -75,18 +83,22 @@ python -c "from django.core.management.utils import get_random_secret_key; print
 ```
 
 Crear un archivo .env en la raíz del proyecto y añadir:
-
+```env
 SECRET_KEY=clave_generada
 DEBUG=True
+```
 
 ---
+
 ## 7. Ejecutar el servidor de desarrollo
 
 ```bash
 python manage.py runserver
 ```
 ---
-## 8. 8. Crear aplicaciones Django
+
+## 8. Crear aplicaciones Django
+
 ```bash
 python manage.py startapp nombre_app
 ```
